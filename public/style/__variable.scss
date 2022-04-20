@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+font-family: 'Abril Fatface', cursive;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+:root{
+    /*
+    font family
+    */
+    --ff-A: 'Quicksand', sans-serif;
+    --ff-B: 'Playfair Display SC', serif;
+    --ff-C: 'Raleway', sans-serif;
+    /*
+    font size
+    */
+    --fz-body: 17px;
+
+    --fz-logo-mini: 50px;
+    --fz-logo-big: 80px;
+
+    --fz-position: 30px;
+    --fz-container-title: 50px;
+
+    --fz-icon-primary: 40px;
+    --fz-explore: 16px;
+    --fz-vatican: 100px;
+    --fz-art-name: 25px;
+    --fz-discover-btn: 13px;
+
+    /*
+    color
+    */
+    //--color-A: #ffd8b8;
+    //--color-B: #0B474B;
+    --color-A: #3a1017;
+    --color-B: #f88275;
+    --color-C: #1A1A1A;
+
+    /*
+    gap
+     */
+    --gap-main: 30px;
+    --gap-container-content: 17px;
+    --gap-museum-item-des: 10px;
+
+    /*
+    margin
+     */
+    --margin-line-main: var(--gap-container-content) 0;
+    --margin-explore: 30px auto 0 auto;
+
+    /*
+    padding
+     */
+    --padding-discover-btn: 8px 13px;
+    --padding-top-body: 20px;
+    --padding-comment: 10px 15px;
+
+    /*
+    border-radius
+     */
+    --brr-comment: 20px;
+
+    /*
+    border
+     */
+    --border-comment: 1px solid var(--color-B);
+
+    /*
+    width
+     */
+    --width-screen: 1300px;
+
+    /*
+    grid template column
+     */
+    --gtc-project-content: 1.5fr 1fr;
+    --gtc-museum-content: repeat(3, 1fr);
+
+    /*
+    space position
+     */
+    --space-nav: 40px;
+}
+
+@keyframes arrow-hoz-move {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes item-animation {
+    0%{
+        transform: translate(0, 0);
+    }
+    20%{
+        transform: translate(0, 0);
+    }
+    25%{
+        transform: translate(-100%, 0);
+    }
+    45%{
+        transform: translate(-100%, 0);
+    }
+    50%{
+        transform: translate(-100%, -100%);
+    }
+    70%{
+        transform: translate(-100%, -100%);
+    }
+    75%{
+        transform: translate(0, -100%);
+    }
+    95%{
+        transform: translate(0, -100%);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}

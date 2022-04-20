@@ -1,0 +1,236 @@
+body{
+    font-family: var(--ff-A);
+    font-size: var(--fz-body);
+    color: var(--color-B);
+
+    position: relative;
+
+    background-color: var(--color-A);
+
+    font-weight: 600;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon--primary{
+    font-size: var(--fz-icon-primary);
+}
+
+.line--main{
+    height: 1px;
+    width: 100%;
+
+    margin: var(--margin-line-main);
+
+    background-color: var(--color-B);
+}
+
+.logo{
+    font-family: var(--ff-B);
+}
+
+.logo--mini{
+    font-size: var(--fz-logo-mini);
+    font-weight: bold;
+}
+
+.logo--big{
+    font-size: var(--fz-logo-big);
+    font-weight: bold;
+}
+
+.header{
+
+    width: var(--width-screen);
+    margin: auto;
+
+    &--inner{
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.nav{
+    left: var(--space-nav);
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__link{
+        color: var(--color-B);
+        font-weight: bold;
+
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+    }
+}
+
+.tool{
+    //bottom: var(--padding-top-body);
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--space-nav);
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item{
+        width: 55px;
+        height: 55px;
+        background-color: var(--color-B);
+        color: var(--color-A);
+        border: 1px solid var(--color-B);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 100%;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+        font-size: 23px;
+
+        &:hover{
+            transform: scale(1.1);
+
+            background-color: var(--color-A);
+            color: var(--color-B);
+        }
+    }
+}
+
+.contact{
+
+    &__form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap-container-content);
+    }
+    &__info{
+        padding: var(--gap-container-content) calc(4*var(--gap-container-content));
+
+        border: 1px solid var(--color-B);
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        & .owner-name{
+            font-size: 25px;
+        }
+    }
+    &__method__list{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        & span{
+            font-size: 14px;
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: flex-end;
+        text-decoration: none;
+        gap: 5px;
+        color: var(--color-B);
+    }
+    &__action{
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & label{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            gap: 8px;
+        }
+        & input, & .button{
+            height: 40px;
+        }
+        & input, & textarea{
+            padding: 13px;
+            width: 100%;
+            outline: 0;
+            border: 1px solid var(--color-B);
+            background-color: var(--color-A);
+
+        }
+        & .label{
+        }
+        & textarea{
+            height: 100px;
+        }
+        & input, & textarea, & .button{
+            font-size: var(--fz-body);
+            color: var(--color-B);
+            text-decoration: none;
+            border-radius: 18px;
+
+        }
+        & .button{
+            width: fit-content;
+            padding: 10px 20px;
+            border: 1px solid var(--color-B);
+            background-color: var(--color-B);
+            color: var(--color-A);
+
+            cursor: pointer;
+        }
+
+    }
+}
+
+.position{
+    font-size: var(--fz-position);
+    font-weight: 600;
+}
+
+
+/* frames */
+
+.fixed{
+    position: fixed;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.al-flex-end{
+    align-items: flex-end;
+}
+
+.ff-B{
+    font-family: var(--ff-B);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+

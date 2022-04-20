@@ -1,0 +1,137 @@
+#museum{
+
+    padding-top: var(--padding-top-body);
+
+    & .main{
+        width: var(--width-screen);
+        margin: auto;
+    }
+
+    & .museum-title{
+        font-size: 100px;
+
+        margin: 110px 0;
+    }
+
+    & .museum-tool{
+        display: flex;
+        justify-content: space-between;
+
+        & i{
+            font-size: 27px;
+
+            cursor: pointer;
+        }
+    }
+
+    & .search{
+        display: flex;
+        gap: 15px;
+
+        &:hover input::placeholder{
+            color: var(--color-B);
+        }
+
+        & input{
+            height: 35px;
+            width: 300px;
+
+            font-size: 18px;
+
+            padding-left: 10px;
+
+            background-color: transparent;
+
+            color: var(--color-B);
+
+            border: 0;
+            outline: 0;
+
+            &::placeholder{
+                transition: 0.3s;
+            }
+        }
+    }
+
+    & .filter{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    & .museum-container{
+
+        margin: 70px 0;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 70px;
+
+        align-items: center;
+
+        & .art-image{
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        & .museum__item{
+            position: relative;
+
+            transition: 0.3s;
+
+            &:hover .museum__item__des{
+                opacity: 1;
+            }
+
+            &:hover{
+                transform: scale(1.2);
+            }
+
+            &__des{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                backdrop-filter: blur(6px);
+                color: white;
+
+                opacity: 0;
+                transition: 0.3s;
+
+                & .art__date{
+                    font-size: 13px;
+                }
+
+                & .art__name{
+                    font-size: 18px;
+                    text-align: center;
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1; /* number of lines to show */
+                    line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+
+                & .discover-btn{
+                    font-size: 13px;
+                    color: var(--color-B);
+
+                    padding: 5px 7px;
+                    border-radius: 15px;
+                    background-color: var(--color-A);
+                }
+            }
+        }
+    }
+
+}
