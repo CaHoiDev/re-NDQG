@@ -42,10 +42,10 @@ class User extends Model
                             select * from love
                             where artId = $artId and userSessionId = $userId
                             ) as isLoved";
-            return boolval(DB::select($query)[0]->isLoved);
+            return DB::select($query)[0]->isLoved;
         }
         catch(Exception $exception){
-            return false;
+            return 0;
         }
     }
 }

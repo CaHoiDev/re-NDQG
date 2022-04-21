@@ -51,6 +51,8 @@
         </li>
         <li class="tool__item">
             <i class="ri-chat-3-line"></i>
+            <!-- Messenger Plugin chat Code -->
+
         </li>
     </ul>
 </nav>

@@ -61,9 +61,10 @@ class Art extends Model
         return DB::insert($query);
     }
 
-    public static function removeLove(array $data, $id)
+    public static function delLove(array $data, $id)
     {
-
+        $query = "delete from love where ${data['userSessionId']} = userSessionId and $id = artId";
+        return DB::delete($query);
     }
 
     public static function getComments($id)
@@ -74,6 +75,16 @@ class Art extends Model
         return DB::select($query);
     }
 
+    public static function sendComment(array $data, $artId, $userId)
+    {
+        $queryInsert = "insert into
+                comment(artId, userSessionId, commentContent)
+                values ($artId, $userId, '${data['comment']}')";
+        $queryUpdate = "update usersession set userName = '${data['userName']}' where userSessionId = $userId";
+        DB::insert($queryInsert);
+        DB::update($queryUpdate);
+        return true;
+    }
 
 
 }

@@ -34,6 +34,7 @@ Route::get('/museum/search/{keyword}', [MuseumController::class, 'search']);
 
 
 Route::post('/museum/{id}/love/post', [ArtController::class, 'postLove']);
+Route::post('/museum/{id}/comment', [ArtController::class, 'sendComment']);
 
 
-Route::delete('/museum/{id}/love/remove', [ArtController::class, 'artDetail']);
+Route::delete('/museum/{id}/love/delete', [ArtController::class, 'delLove']);

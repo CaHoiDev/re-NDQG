@@ -11,12 +11,17 @@ class ArtController extends Controller
 {
     public function artDetail($id)
     {
-        $userLove = User::checkLove(1);
+        $userLove = User::checkLove($id);
 
         return view('portfolio.art', [
             'artDetail' => Art::getArtDetail($id),
             'userLove' => $userLove
         ]);
+    }
+
+    public function sendComment(Request $request, $id)
+    {
+        return Art::sendComment($request->all(), $id, User::getUserSession()->userSessionId);
     }
 
     public function postLove($id)
@@ -27,11 +32,19 @@ class ArtController extends Controller
             "userName" => $user->userName
         ];
 
-        return Art::addLove($data, $id);
+        Art::addLove($data, $id);
+        return Art::getLovesAmount($id);
     }
 
-    public function delLove()
+    public function delLove($id)
     {
+        $user = User::getUserSession();
+        $data = [
+            "userSessionId" => $user->userSessionId,
+            "userName" => $user->userName
+        ];
 
+        Art::delLove($data, $id);
+        return Art::getLovesAmount($id);
     }
 }

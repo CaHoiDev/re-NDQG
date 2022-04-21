@@ -6,10 +6,7 @@
 
 @section('main')
 
-
-
 <main class="main">
-    <div>{{ $userLove }}</div>
     <div class="art">
         <div class="art__image">
             <img src="{{ asset($artDetail["artImage"]) }}" alt="">
@@ -26,7 +23,7 @@
                     @if(!$userLove)
                         <div class="tool-icon tool-icon-love" onclick="crLove(id = {{ $artDetail['artInfo']->artId }})"><i class="ri-heart-line"></i></div>
                     @else
-                        <div class="tool-icon tool-icon-love" onclick="crLove(id = {{ $artDetail['artInfo']->artId }})"><i class="ri-heart-fill"></i></div>
+                        <div class="tool-icon tool-icon-love" onclick="crLove(id = {{ $artDetail['artInfo']->artId }}, 'delete')"><i class="ri-heart-fill"></i></div>
                     @endif
                 </li>
                 <li class="art__tool__item">
@@ -54,13 +51,13 @@
             </div>
             <div class="user-comment">
                 <input name="comment" id="comment" type="text" placeholder="what do you think about my art?">
-                <i class="ri-send-plane-line"></i>
+                <i class="ri-send-plane-line" onclick="sendComment({{ $artDetail['artInfo']->artId }})"></i>
             </div>
         </div>
         <div class="line--main"></div>
         <div class="comment-shower">
             @if( count($artDetail['comments'] ) === 0)
-                <div style="margin: auto">there are no comments yet!</div>
+                <div id="cmt-notify" style="margin: auto">there are no comments yet!</div>
             @else
                 @foreach($artDetail['comments'] as $cmt)
                     <div class="comment-item">

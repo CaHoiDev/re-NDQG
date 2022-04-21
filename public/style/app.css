@@ -91,8 +91,8 @@ font-family: 'Raleway', sans-serif;
   /*
   color
   */
-  --color-A: #3a1017;
-  --color-B: #f88275;
+  --color-A: #ffd8b8;
+  --color-B: #0B474B;
   --color-C: #1A1A1A;
   /*
   gap
@@ -122,7 +122,7 @@ font-family: 'Raleway', sans-serif;
   /*
   width
    */
-  --width-screen: 1300px;
+  --width-screen: 1200px;
   /*
   grid template column
    */
@@ -211,6 +211,7 @@ i {
 .logo--mini {
   font-size: var(--fz-logo-mini);
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .logo--big {
@@ -234,12 +235,11 @@ i {
 .nav__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .nav__link {
   color: var(--color-B);
   font-weight: bold;
-  text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
@@ -524,6 +524,37 @@ i {
 }
 #index .museum__item__des .discover-btn:hover {
   transform: scale(0.9);
+}
+#index .about__container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 400px 1fr;
+}
+#index .about__container .avatar {
+  width: 100%;
+  height: 400px;
+  border: 1px solid var(--color-B);
+  padding: 10px;
+}
+#index .about__container .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#index .about__container .about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+#index .about__container .about-header {
+  font-size: 40px;
+}
+#index .about__container .btn {
+  color: var(--color-A);
+  background-color: var(--color-B);
+  padding: 10px 15px;
+  border-radius: 30px;
 }
 
 #art {

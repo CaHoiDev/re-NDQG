@@ -182,7 +182,23 @@
             </div>
             <div class="line--main"></div>
         </div>
-        <div class="container__content">
+        <div class="container__content about__container">
+            <div class="avatar">
+                <img src="images/profile/avatar.jpg" alt="">
+            </div>
+            <div class="about">
+                <div class="about-header">Nguyen Dang Quynh Giao</div>
+                <div class="about-detail">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis expedita itaque possimus quos recusandae repellendus repudiandae suscipit veniam? Aspernatur eos illum ipsa iste iusto minus quam temporibus unde veritatis!
+                    consectetur adipisicing elit. Ab accusantium corporis dicta dolorem esse est et explicabo incidunt iste itaque modi natus omnis quas qui quod recusandae, repudiandae sunt voluptatibus.
+                </div>
+                <div class="about-detail">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis expedita itaque possimus quos recusandae repellendus repudiandae suscipit veniam? Aspernatur eos illum ipsa iste iusto minus quam temporibus unde veritatis!
+                </div>
+                <div class="btn">
+                    chat with me
+                </div>
+            </div>
         </div>
     </div>
 
