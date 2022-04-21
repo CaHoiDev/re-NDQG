@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <link rel="stylesheet" href="public/style/app.css">
+    <link rel="stylesheet" href="/public/style/app.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -31,7 +31,7 @@
 
 
 <!--navigation-->
-<nav class="nav fixed">
+<!-- <nav class="nav fixed">
     <ul class="nav__list">
         <li class="nav__item"><div class="logo logo--mini">G</div></li>
         <li class="nav__item"><a href="/" class="nav__link">home</a></li>
@@ -40,7 +40,7 @@
         <li class="nav__item"><a href="" class="nav__link">about</a></li>
         <li class="nav__item"><a href="/#contact" class="nav__link">contact</a></li>
     </ul>
-</nav>
+</nav> -->
 
 <nav class="tool fixed">
     <ul class="tool__list">
@@ -66,13 +66,134 @@
     <div class="line--main"></div>
 </header>
 
+
 <!--main-->
-<main>
+<main >
+    <div class="container">
+        <div class="Book__intro" id="Book__intro">
+            <div class="center" id="center">
+                <div class="book__info">
+                    <p>The Gotham</p>
+                    <p>Nguyen Dang Quynh giao</p>
+                    <p>Apr 03 2022</p>
+                    <p id="view"><i class="ri-arrow-right-line"></i></p>
+                </div>
+                <div class="page" id="page">
+                    <img src="/public/images/gotham1/0001.jpg" alt="">
+                </div>
+        </div>
+        </div>
+        <div class="thebook" id="thebook">
+            <div class="book-content">
+                <div class="book">
+                    <div class="face-front" id="portada">
+                    </div>
+                    <div class="face-back" id="g0002">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0003">
+                    </div>
+                    <div class="face-back" id="g0004">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0005">
+                    </div>
+                    <div class="face-back" id="g0006">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0007">
+                    </div>
+                    <div class="face-back" id="g0008">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0009">
+                    </div>
+                    <div class="face-back" id="g0010">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0011">
+                    </div>
+                    <div class="face-back" id="g0012">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0013">
+                    </div>
+                    <div class="face-back" id="g0014">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0015">
+                    </div>
+                    <div class="face-back" id="g0016">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0017">
+                    </div>
+                    <div class="face-back" id="g0018">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0019">
+                    </div>
+                    <div class="face-back" id="g0020">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0021">
+                    </div>
+                    <div class="face-back" id="g0022">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0023">
+                    </div>
+                    <div class="face-back" id="g0024">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0025">
+                    </div>
+                    <div class="face-back" id="g0026">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0027">
+                    </div>
+                    <div class="face-back" id="g0028">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0029">
+                    </div>
+                    <div class="face-back" id="g0030">
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-front" id="g0031">
+                    </div>
+                    <div class="face-back" id="g0032">
+                    </div>
+                </div>
 
+                <div class="book">
+                    <div class="face-front" id="g0034">
+
+                    </div>
+                    <div  class="face-back" id="portada-back" >
+                       
+                    </div>
+                </div>
+            </div>
+        
+    </div>
 </main>
-
-
-@yield('main')
-
 </body>
+<script src="/public/javascript/gotham.js"></script>
 </html>
