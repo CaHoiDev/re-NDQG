@@ -32,9 +32,9 @@
                 </li>
                 <li class="art__tool__item">
                     <div class="amount" id="download-amount">{{ $artDetail['downloadAmount'] === 0 ? '' : $artDetail['downloadAmount']}}</div>
-                    <div class="tool-icon">
+                    <a href="{{ asset($artDetail["artImage"]) }}" download class="tool-icon">
                         <i class="ri-download-cloud-2-line"></i>
-                    </div>
+                    </a>
                 </li>
             </ul>
         </div>

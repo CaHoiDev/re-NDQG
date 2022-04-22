@@ -87,4 +87,87 @@ class Art extends Model
     }
 
 
+
+
+
+
+///////////////
+///
+///
+
+    private static function delLoveB($artId)
+    {
+        $query = "delete from love where $artId = artId";
+        DB::delete($query);
+    }
+    public static function getLove($artId)
+    {
+        $query = "select * from love where $artId = artId";
+        return DB::select($query);
+    }
+
+    private static function delCmts($artId)
+    {
+        $query = "delete from comment where $artId = artId";
+        DB::delete($query);
+    }
+
+    public static function delArt($artId): bool
+    {
+        $query = "delete from art where $artId = art.artId";
+        self::delCmts($artId);
+        self::delLoveB($artId);
+        return DB::delete($query);
+    }
+
+    public static function updateArt(array $data, $artId)
+    {
+        $artName = $data['artName'] ?? DB::select("select art.artName from art where $artId = artId")[0]->artName;
+        $artImage = $data['artImage'] ?? DB::select("select art.artImage from art where $artId = artId")[0]->artImage;
+        $publicationDate = $data['publicationDate'] ?? DB::select("select art.publicationDate from art where $artId = artId")[0]->publicationDate;
+        $downloadAmount = $data['downloadAmount'] ?? DB::select("select art.downloadAmount from art where $artId = artId")[0]->downloadAmount;
+
+        $query = "update art
+                  set artName = \" $artName \",
+                      artImage = \" $artImage \",
+                      publicationDate = \" $publicationDate \",
+                      downloadAmount = $downloadAmount
+                  where artId = $artId";
+
+        DB::update($query);
+
+        return self::findArt($artId);
+    }
+
+    public static function findArt($artId)
+    {
+        $query = "select * from art where $artId = artId";
+        return DB::select($query)[0];
+    }
+
+    public static function getArts()
+    {
+        $query = "select * from art";
+        return DB::select($query);
+    }
+
+
+    public static function addComment(array $data, $artId): bool
+    {
+        $query = "insert into comment(artId, userSessionId, commentContent)
+                  value ($artId, ${data['userSessionId']}, \"${data['commentContent']}\");";
+        return DB::insert($query);
+    }
+
+    public static function addArt(array $data): array
+    {
+        $query = "insert into art(artName, artImage, publicationDate)
+                  values (\"${data['artName']}\", \"${data['artImage']}\", \"${data['publicationDate']}\")";
+
+        DB::insert($query);
+
+        return $data;
+    }
+
+
 }

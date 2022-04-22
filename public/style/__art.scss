@@ -1,9 +1,28 @@
 #art{
     padding-top: var(--padding-top-body);
 
-    & .main{
+    & .main, & .thank{
         width: var(--width-screen);
         margin: auto;
+    }
+
+    & .thank{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        & h1{
+            font-size: 50px;
+            font-family: var(--ff-B);
+        }
+        & a{
+            color: var(--color-A);
+            background-color: var(--color-B);
+            padding: 10px 15px;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
     }
 
     & .art{

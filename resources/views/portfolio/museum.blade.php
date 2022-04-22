@@ -29,7 +29,7 @@
     <div class="museum-container">
         @foreach($arts as $art)
             <div class="museum__item">
-                <img src="{{ asset($art->artImage) }}" alt="">
+                <img src="{{ strpos($art->artImage, 'museum') ? asset($art->artImage) : base64_decode($art->artImage) }}" alt="">
                 <div class="museum__item__des">
                     <div class="art__date">
                         {{ $art->publicationDate }}

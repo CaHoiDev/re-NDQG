@@ -48,5 +48,17 @@ class User extends Model
             return 0;
         }
     }
+///////////////////////
+    public static function getUsers()
+    {
+        return self::all();
+    }
+
+    public static function getUser($id)
+    {
+        $query = "select * from usersession where userSessionId = $id";
+        return DB::select($query)[0];
+    }
+
 }
 

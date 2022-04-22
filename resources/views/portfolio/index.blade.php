@@ -16,7 +16,7 @@
                     <span>Project</span>
                 </div>
                 <div class="pointer open__container__btn flex al-flex-end">
-                    <a class="explore" href="#"><span>explore more ...</span></a>
+                    <a class="explore" href="/work"><span>explore more ...</span></a>
                 </div>
             </div>
             <div class="line--main"></div>
@@ -44,14 +44,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="item project__item" id="turtle">
+                <a href="/work/rua" class="item project__item" id="turtle">
                     <div class="item__animation">
                         <img src="images/rua/IMG_E2409.JPG" alt="" class="project__item__image">
                         <img src="images/rua/IMG_E2282.JPG" alt="" class="project__item__image">
                         <img src="images/rua/IMG_E2414.JPG" alt="" class="project__item__image">
                         <img src="images/rua/IMG_E2398.JPG" alt="" class="project__item__image">
                     </div>
-                </div>
+                </a>
             </div>
             <div class="project__content__row">
                 <div class="item project__item" id="heroic">
@@ -62,14 +62,14 @@
                         <img src="images/Heroic/Nghiên%20cứu%20Heroic%20realism%20(%20chủ%20nghĩa%20hiện%20thực%20anh%20hùng).jpg" alt="" class="project__item__image">
                     </div>
                 </div>
-                <div class="item project__item" id="gotham">
+                <a href="/work/gotham" class="item project__item" id="gotham">
                     <div class="item__animation">
                         <img src="images/gotham/LAYOUT%20SÁCH-7-1.jpg" alt="" class="project__item__image">
                         <img src="images/gotham/LAYOUT%20SÁCH-1-1.jpg" alt="" class="project__item__image">
                         <img src="images/gotham/LAYOUT%20SÁCH-3-1.jpg" alt="" class="project__item__image">
                         <img src="images/gotham/LAYOUT%20SÁCH-13-1.jpg" alt="" class="project__item__image">
                     </div>
-                </div>
+                </a>
                 <div class="item project__item">
                     <img src="images/museum/vangoghmuseum-s0530N2012-800.jpg" alt="" class="project__item__image">
                 </div>
@@ -85,7 +85,7 @@
                     <span>Museum</span>
                 </div>
                 <div class="pointer open__container__btn flex al-flex-end">
-                    <a class="explore" href="#"><span>explore more ...</span></a>
+                    <a class="explore" href="/museum"><span>explore more ...</span></a>
                 </div>
             </div>
             <div class="line--main"></div>
@@ -249,7 +249,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="contact__action">
+            <form action="/send-email" method="post" class="contact__action">
+                @csrf
                 <label for="name">
                     <span class="label">name</span>
                     <input type="text" id="name" name="name">
@@ -260,12 +261,12 @@
                 </label>
                 <label for="message">
                     <span class="label">message</span>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea type="text" id="message" name="message"></textarea>
                 </label>
                 <button type="submit" class="button">
                     submit
                 </button>
-            </div>
+            </form>
         </div>
     </div>
 

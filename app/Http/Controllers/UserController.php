@@ -15,4 +15,14 @@ class UserController extends Controller
         }
         return User::getUserDB($_SESSION['userSessionId']);
     }
+
+    public function getUsers()
+    {
+        return User::getUsers();
+    }
+
+    public function getUser($id)
+    {
+        return User::getUser($id);
+    }
 }

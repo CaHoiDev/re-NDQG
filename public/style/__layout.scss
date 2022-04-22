@@ -10,6 +10,10 @@ body{
     font-weight: 600;
 }
 
+*{
+    transition: 0.3s;
+}
+
 
 html{
     scroll-behavior: smooth;
@@ -63,6 +67,7 @@ i{
 
 .nav{
     left: var(--space-nav);
+    z-index: 100;
     &__list{
         display: flex;
         flex-direction: column;
@@ -211,6 +216,7 @@ i{
 
 .fixed{
     position: fixed;
+    // margin-top: 100px;
 }
 
 .flex{
